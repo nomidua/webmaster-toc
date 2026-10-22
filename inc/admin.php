@@ -149,8 +149,8 @@ function wmtoc_admin_assets() {
 .wmtoc-wrap .wmtoc-cl b{color:#1d2327;font-weight:600;}
 .wmtoc-wrap .wmtoc-sw{position:relative;flex:0 0 auto;width:28px;height:28px;box-sizing:border-box;border:1px solid #8c8f94;border-radius:4px;background-color:#fff;background-image:repeating-conic-gradient(#dcdcde 0 25%,#fff 0 50%);background-size:10px 10px;cursor:pointer;}
 .wmtoc-wrap .wmtoc-sw:hover{border-color:#2271b1;box-shadow:0 0 0 1px #2271b1;}
-.wmtoc-wrap .wmtoc-sw i{position:absolute;inset:0;border-radius:3px;}
-.wmtoc-wrap .wmtoc-pick{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;opacity:0;cursor:pointer;}
+.wmtoc-wrap .wmtoc-sw i{position:absolute;inset:0;border-radius:3px;pointer-events:none;}
+.wmtoc-wrap .wmtoc-pick{position:absolute;inset:0;z-index:1;width:100%;height:100%;padding:0;border:0;opacity:0;cursor:pointer;}
 .wmtoc-wrap .wmtoc-preview{max-width:520px;font-size:15px;}
 .wmtoc-wrap .wmtoc-preview .wmtoc{margin:0;}
 .wmtoc-wrap .wmtoc-update{display:flex;align-items:center;gap:12px;margin:12px 0 4px;}
