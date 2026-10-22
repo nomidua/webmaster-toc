@@ -3,7 +3,7 @@
  * Plugin Name: WebMaster TOC
  * Plugin URI: https://github.com/nomidua/webmaster-toc
  * Description: Зміст статті за заголовками H2: автоматично або в місці мітки, кнопки в класичному редакторі, оновлення з GitHub.
- * Version: 1.1.1
+ * Version: 1.2
  * Requires at least: 6.2
  * Requires PHP: 7.4
  * Author: nomidua
@@ -13,7 +13,7 @@
 
 defined('ABSPATH') || exit;
 
-define('WMTOC_VERSION', '1.1.1');
+define('WMTOC_VERSION', '1.2');
 define('WMTOC_FILE', __FILE__);
 define('WMTOC_DIR', plugin_dir_path(__FILE__));
 define('WMTOC_URL', plugin_dir_url(__FILE__));

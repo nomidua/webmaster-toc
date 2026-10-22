@@ -14,9 +14,10 @@ function wmtoc_plain($html) {
 	return trim(preg_replace('/[\s\x{00A0}]+/u', ' ', $t));
 }
 
-// Якір: транслітерація, лише латиниця і цифри, перші N слів
+// Якір: як у Easy TOC + транслітерація (сумісність зі старими якорями ЛП), перші N слів
 function wmtoc_slug($text, $words) {
-	$s = strtr(mb_strtolower($text, 'UTF-8'), wmtoc_translit());
+	$s = strtr(mb_strtolower(remove_accents($text), 'UTF-8'), wmtoc_translit());
+	$s = preg_replace("~[*'();@=+\$,/?#\\[\\]%{}|\\\\^`.!’]~u", '', $s);
 	$s = trim(preg_replace('/[\s-]+/', ' ', preg_replace('/[^a-z0-9\s-]/', ' ', $s)));
 	$id = implode('-', array_slice(explode(' ', $s), 0, max(1, (int) $words)));
 	return $id !== '' ? $id : 'section';
