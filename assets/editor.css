@@ -1,0 +1,14 @@
+/* Кнопки TOC у панелі візуального редактора */
+div.mce-toolbar .wmtoc-tb{float:right!important;display:flex!important;gap:4px!important;margin:2px 4px 2px 10px!important;padding:0!important;white-space:nowrap!important;}
+div.mce-toolbar .wmtoc-tb .wmtoc-btn{display:inline-flex!important;align-items:center!important;gap:4px!important;box-sizing:border-box!important;height:28px!important;margin:0!important;padding:0 8px 0 6px!important;border:1px solid #dcdcde!important;border-radius:3px!important;background:#fff!important;color:#50575e!important;font:400 13px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif!important;cursor:pointer!important;transition:border-color .15s,color .15s,background-color .15s!important;}
+div.mce-toolbar .wmtoc-tb .wmtoc-btn *{color:inherit!important;cursor:pointer!important;}
+div.mce-toolbar .wmtoc-tb .wmtoc-btn:hover{border-color:#8c8f94!important;color:#1d2327!important;background:#f6f7f7!important;}
+div.mce-toolbar .wmtoc-tb .wmtoc-btn:focus-visible{outline:2px solid #2271b1!important;outline-offset:1px!important;}
+div.mce-toolbar .wmtoc-tb svg{width:18px!important;height:18px!important;margin:0 1px!important;fill:none!important;stroke:currentColor!important;stroke-width:1.7!important;stroke-linecap:round!important;}
+div.mce-toolbar .wmtoc-tb .wmtoc-ico-list circle{fill:currentColor!important;stroke:none!important;}
+div.mce-toolbar .wmtoc-tb .wmtoc-btn-txt{font-size:13px!important;line-height:1!important;}
+div.mce-toolbar .wmtoc-tb .wmtoc-btn-off.is-active{border-color:#d63638!important;color:#d63638!important;background:#fcf0f1!important;}
+
+/* Статус у нижній смузі редактора */
+.wmtoc-status{margin-left:10px;color:#646970;}
+.wmtoc-status:before{content:"·";margin-right:10px;}

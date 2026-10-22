@@ -19,8 +19,13 @@ define('WMTOC_DIR', plugin_dir_path(__FILE__));
 define('WMTOC_URL', plugin_dir_url(__FILE__));
 define('WMTOC_REPO', 'nomidua/webmaster-toc');
 
-require_once WMTOC_DIR . 'inc/settings.php';
-require_once WMTOC_DIR . 'inc/render.php';
-require_once WMTOC_DIR . 'inc/editor.php';
-require_once WMTOC_DIR . 'inc/admin.php';
-require_once WMTOC_DIR . 'inc/updater.php';
+// Неповна копія плагіна (наприклад, реліз без папок) — без фатальної помилки, лише попередження
+$wmtoc_files = ['inc/settings.php', 'inc/render.php', 'inc/editor.php', 'inc/admin.php', 'inc/updater.php', 'assets/editor.js', 'assets/editor.css', 'assets/editor-content.css'];
+$wmtoc_missing = array_filter($wmtoc_files, function ($f) { return !is_file(WMTOC_DIR . $f); });
+if ($wmtoc_missing) {
+	add_action('admin_notices', function () use ($wmtoc_missing) {
+		echo '<div class="notice notice-error"><p>WebMaster TOC: не вистачає файлів (' . esc_html(implode(', ', $wmtoc_missing)) . '). Перевстановіть плагін з повного архіву.</p></div>';
+	});
+	return;
+}
+foreach (['settings', 'render', 'editor', 'admin', 'updater'] as $wmtoc_f) require_once WMTOC_DIR . 'inc/' . $wmtoc_f . '.php';

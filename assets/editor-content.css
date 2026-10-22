@@ -1,0 +1,6 @@
+/* Плашка мітки TOC у візуальному редакторі */
+.wmtoc-ph{display:flex;align-items:center;gap:8px;margin:0;padding:9px 12px;border:1px dashed #a7aaad;border-radius:3px;background:#f6f7f7;color:#50575e;font:400 14px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;cursor:default;user-select:none;}
+.wmtoc-ph-ico{display:inline-block;width:16px;height:12px;background:linear-gradient(#8c8f94,#8c8f94) 0 0/3px 2px no-repeat,linear-gradient(#8c8f94,#8c8f94) 5px 0/11px 2px no-repeat,linear-gradient(#8c8f94,#8c8f94) 0 5px/3px 2px no-repeat,linear-gradient(#8c8f94,#8c8f94) 5px 5px/11px 2px no-repeat,linear-gradient(#8c8f94,#8c8f94) 0 10px/3px 2px no-repeat,linear-gradient(#8c8f94,#8c8f94) 5px 10px/11px 2px no-repeat;}
+.wmtoc-ph-txt{flex:1;}
+.wmtoc-ph-x{padding:0 4px;color:#8c8f94;font-size:15px;line-height:1;cursor:pointer;}
+.wmtoc-ph-x:hover{color:#d63638;}
